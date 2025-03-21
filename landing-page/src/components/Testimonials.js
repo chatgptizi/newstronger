@@ -1,5 +1,8 @@
 "use client";
 
+import Image from 'next/image';
+import { imagePlaceholders } from '../lib/placeholderImages';
+
 export default function Testimonials() {
   return (
     <div id="testimonials" className="section bg-white">
@@ -9,11 +12,14 @@ export default function Testimonials() {
           <div className="rounded-lg shadow-lg overflow-hidden">
             <div className="px-6 py-8 bg-gradient-to-r from-primary-700 to-primary-600 sm:p-10 sm:pb-6">
               <div className="flex items-center">
-                <img
-                  className="h-12 w-12 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="Avatar de Ana García"
-                />
+                <div className="h-12 w-12 relative rounded-full overflow-hidden">
+                  <Image
+                    src={imagePlaceholders.avatarWoman1}
+                    alt="Avatar de Ana García"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-medium text-white">Ana García</h3>
                   <p className="text-primary-200">Directora de Marketing, TechCorp</p>
@@ -30,11 +36,14 @@ export default function Testimonials() {
           <div className="rounded-lg shadow-lg overflow-hidden">
             <div className="px-6 py-8 bg-gradient-to-r from-primary-700 to-primary-600 sm:p-10 sm:pb-6">
               <div className="flex items-center">
-                <img
-                  className="h-12 w-12 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="Avatar de Carlos López"
-                />
+                <div className="h-12 w-12 relative rounded-full overflow-hidden">
+                  <Image
+                    src={imagePlaceholders.avatarMan1}
+                    alt="Avatar de Carlos López"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-medium text-white">Carlos López</h3>
                   <p className="text-primary-200">Emprendedor</p>
@@ -51,11 +60,14 @@ export default function Testimonials() {
           <div className="rounded-lg shadow-lg overflow-hidden">
             <div className="px-6 py-8 bg-gradient-to-r from-primary-700 to-primary-600 sm:p-10 sm:pb-6">
               <div className="flex items-center">
-                <img
-                  className="h-12 w-12 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                  alt="Avatar de Laura Martínez"
-                />
+                <div className="h-12 w-12 relative rounded-full overflow-hidden">
+                  <Image
+                    src={imagePlaceholders.avatarWoman2}
+                    alt="Avatar de Laura Martínez"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
                 <div className="ml-4">
                   <h3 className="text-xl font-medium text-white">Laura Martínez</h3>
                   <p className="text-primary-200">Blogger</p>

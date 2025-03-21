@@ -10,7 +10,10 @@ const nextConfig = {
         pathname: '/**',
       },
     ],
+    unoptimized: process.env.NODE_ENV === 'production',
   },
+  output: 'standalone',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig 

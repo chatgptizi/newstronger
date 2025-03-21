@@ -1,3 +1,5 @@
+"use client";
+
 export default function Testimonials() {
   return (
     <div id="testimonials" className="section bg-white">
@@ -9,7 +11,7 @@ export default function Testimonials() {
               <div className="flex items-center">
                 <img
                   className="h-12 w-12 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt="Avatar de Ana García"
                 />
                 <div className="ml-4">
@@ -30,7 +32,7 @@ export default function Testimonials() {
               <div className="flex items-center">
                 <img
                   className="h-12 w-12 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt="Avatar de Carlos López"
                 />
                 <div className="ml-4">
@@ -51,7 +53,7 @@ export default function Testimonials() {
               <div className="flex items-center">
                 <img
                   className="h-12 w-12 rounded-full object-cover"
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                   alt="Avatar de Laura Martínez"
                 />
                 <div className="ml-4">

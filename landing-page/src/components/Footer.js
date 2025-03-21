@@ -1,3 +1,5 @@
+"use client";
+
 import { FiTwitter, FiInstagram, FiFacebook, FiGithub } from 'react-icons/fi';
 
 const navigation = {

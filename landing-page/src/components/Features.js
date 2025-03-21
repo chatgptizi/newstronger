@@ -1,3 +1,5 @@
+"use client";
+
 import { HiOutlineMail, HiOutlineChartBar, HiOutlineTemplate, HiOutlineUserGroup } from 'react-icons/hi';
 
 const features = [

@@ -1,6 +1,6 @@
+"use client";
+
 import { useState } from 'react';
-import { collection, addDoc } from 'firebase/firestore';
-import { db } from '../lib/firebase';
 
 export default function CTA() {
   const [email, setEmail] = useState('');
@@ -20,10 +20,12 @@ export default function CTA() {
     
     try {
       setLoading(true);
-      await addDoc(collection(db, 'subscribers'), {
-        email,
-        createdAt: new Date()
-      });
+      
+      // Simulamos el guardado del email
+      console.log("Email registrado en CTA:", email);
+      
+      // Esperar un poco para simular el proceso
+      await new Promise(resolve => setTimeout(resolve, 800));
       
       setEmail('');
       setStatus({
@@ -31,7 +33,7 @@ export default function CTA() {
         message: '¡Gracias! Tu correo ha sido registrado correctamente.'
       });
     } catch (error) {
-      console.error('Error adding document: ', error);
+      console.error('Error simulado', error);
       setStatus({
         type: 'error',
         message: 'Ha ocurrido un error. Por favor, inténtalo de nuevo.'

@@ -1,3 +1,5 @@
+"use client";
+
 import { HiOutlineUserAdd, HiOutlinePencilAlt, HiOutlinePaperAirplane } from 'react-icons/hi';
 
 const steps = [

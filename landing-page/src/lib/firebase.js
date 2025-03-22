@@ -1,21 +1,25 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+// Este archivo proporciona un stub para simular Firebase
+// en lugar de conectarse a un backend real
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+// Mock de Firestore para entorno estático
+export const db = {
+  // Función simulada para añadir documentos
+  collection: (name) => ({
+    // Función para simular almacenamiento de datos
+    addDoc: async (data) => {
+      console.log(`Simulando guardar en colección ${name}:`, data);
+      return { id: "mock-id-" + Date.now() };
+    }
+  })
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// Exportamos funciones simuladas para mantener compatibilidad con el código existente
+export const collection = (db, name) => {
+  console.log(`Accediendo a colección simulada: ${name}`);
+  return { name };
+};
 
-export { db }; 
+export const addDoc = async (collectionRef, data) => {
+  console.log(`Simulando añadir documento a ${collectionRef.name}:`, data);
+  return { id: "mock-id-" + Date.now() };
+}; 
